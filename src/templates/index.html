@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Gerenciador de Tarefas</title>
+    <style>
+        body {
+            font-family: Arial;
+            background: #f4f4f4;
+            text-align: center;
+        }
+        h1 {
+            color: #333;
+        }
+        form {
+            margin: 20px;
+        }
+        input {
+            padding: 10px;
+            margin: 5px;
+        }
+        button {
+            padding: 10px;
+            background: #28a745;
+            color: white;
+            border: none;
+        }
+        .tarefa {
+            background: white;
+            margin: 10px auto;
+            padding: 10px;
+            width: 300px;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+
+<h1>📋 Lista de Tarefas</h1>
+
+<form method="POST" action="/tarefas_web">
+    <input type="text" name="nome" placeholder="Nome da tarefa" required>
+    <input type="text" name="status" placeholder="Status">
+    <button type="submit">Adicionar</button>
+</form>
+
+{% for t in tarefas %}
+<div class="tarefa">
+    <p><strong>{{ t.nome }}</strong></p>
+    <p>{{ t.status }}</p>
+</div>
+{% endfor %}
+
+</body>
+</html>

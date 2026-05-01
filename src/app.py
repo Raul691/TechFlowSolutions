@@ -1,8 +1,24 @@
-from flask import Flask, request, jsonify
+from flask import Flask, request, jsonify, render_template, redirect
 
 app = Flask(__name__)
 
 tarefas = []
+
+@app.route('/')
+def home():
+    return render_template('index.html', tarefas=tarefas)
+
+@app.route('/tarefas_web', methods=['POST'])
+def criar_tarefa_web():
+    nome = request.form.get('nome')
+    status = request.form.get('status')
+
+    tarefas.append({
+        "nome": nome,
+        "status": status
+    })
+
+    return redirect('/')
 
 @app.route('/tarefas', methods=['GET'])
 def listar_tarefas():
