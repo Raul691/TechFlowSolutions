@@ -40,6 +40,7 @@
 <form method="POST" action="/tarefas_web">
     <input type="text" name="nome" placeholder="Nome da tarefa" required>
     <input type="text" name="status" placeholder="Status">
+    <input type="text" name="prioridade" placeholder="Prioridade (alta, média, baixa)">
     <button type="submit">Adicionar</button>
 </form>
 
@@ -47,6 +48,7 @@
 <div class="tarefa">
     <p><strong>{{ t.nome }}</strong></p>
     <p>{{ t.status }}</p>
+    <p>{{ t.prioridade }}</p>
 </div>
 {% endfor %}
 
