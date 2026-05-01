@@ -10,8 +10,7 @@ Foi utilizada a metodologia Kanban, organizando tarefas em:
 - Concluído
 
 ## Tecnologias
-- Python (Flask) ou JavaScript ou Java (escolhe uma que você sabe)
-- GitHub
+- Python (Flask)
 - GitHub Actions
 
 ## Funcionalidades
