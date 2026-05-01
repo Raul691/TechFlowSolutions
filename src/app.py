@@ -23,6 +23,12 @@ def criar_tarefa_web():
 
     return redirect('/')
 
+@app.route('/deletar/<int:id>', methods=['POST'])
+def deletar_tarefa_web(id):
+    if id < len(tarefas):
+        tarefas.pop(id)
+    return redirect('/')
+
 
 @app.route('/tarefas', methods=['GET'])
 def listar_tarefas():
