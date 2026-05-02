@@ -21,6 +21,3 @@ Foi utilizada a metodologia Kanban, organizando tarefas em:
 
 ## Mudança de Escopo
 Inicialmente o sistema seria apenas CRUD de tarefas, porém foi adicionada a funcionalidade de "prioridade de tarefas" para melhorar o controle e com isso facilitar para o usuario.
-
-## Como rodar
-(completa depois quando fizer o código)
